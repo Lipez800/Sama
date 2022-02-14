@@ -1,0 +1,286 @@
+body {
+  background: url("imgs/background.webp") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  gap: 1.5rem;
+  place-content: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+[class^="btn-"] {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 24px;
+  max-width: 250px;
+  gap: 3rem;
+  border: 3px solid currentColor;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding-left: 0.2rem;
+}
+
+/*efeitos abaixo*/
+
+@-webkit-keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+@-webkit-keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+.btn-11 {
+  position: relative;
+  color: #e0f8f1;
+}
+.btn-11:before,
+.btn-11:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #04b486;
+  border-radius: 50%;
+}
+.btn-11:before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+.btn-11:after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+.btn-11:hover {
+  color: #04b486;
+}
+.btn-11:hover:before {
+  -webkit-animation: criss-cross-left 0.8s both;
+  animation: criss-cross-left 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.btn-11:hover:after {
+  -webkit-animation: criss-cross-right 0.8s both;
+  animation: criss-cross-right 0.8s both;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+/*efeito lingua*/
+
+.rotate:hover {
+  -webkit-transform: rotateZ(-30deg);
+  -ms-transform: rotateZ(-30deg);
+  transform: rotateZ(-30deg);
+}
+
+/*fim efeito lingua/*
+
+/*efeito Texto*/
+
+.typewriter {
+  font-family: "Anonymous Pro", monospace;
+  width: 100%;
+}
+h1 {
+  overflow: hidden;
+  margin: 0 auto;
+  display: inline-block;
+  font-weight: normal;
+}
+h1:after {
+  content: "";
+  display: inline-block;
+  background-color: white;
+  margin-left: 2px;
+  height: 25px;
+  width: 4px;
+  animation: cursor 0.4s infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes cursor {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*fim efeito Texto*/
+
+/*fim efeito*/
+
+.idioma {
+  width: 3.2rem;
+  float: left;
+  display: block;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+}
+
+/*segunda parte*/
+.centro {
+  display: grid;
+  grid-template-columns: 1.9fr 2fr;
+  place-content: space-evenly;
+  color: white;
+  align-content: center;
+}
+
+.texto {
+  font-size: 2.2rem;
+  margin-top: 21%;
+  margin-left: 23%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.logo {
+  width: 15%;
+}
+
+li {
+  margin-top: 1.5rem;
+}
+
+/*Botao Principal*/
+
+.blue-tr {
+  width: 18rem;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px;
+  margin: 14.8rem 3rem;
+  font-size: 109%;
+  font-weight: 600;
+  color: #ecf0f1;
+  transition: 0.5s;
+  border-radius: 10%;
+}
+
+.blue-tr {
+  background-color: #0174df;
+  border-radius: 10%;
+}
+
+.blue-tr:before {
+  position: absolute;
+  content: "";
+  border-top: 5px solid #2e9afe;
+  border-left: 5px solid #2e9afe;
+  border-right: 5px solid #0080ff;
+  border-bottom: 5px solid #0080ff;
+  border-radius: 10%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  transition: 0.5s;
+}
+
+.blue-tr:hover {
+  box-shadow: 7px 7px #0080ff, -7px -7px #2e9afe;
+  border-radius: 15%;
+  cursor: pointer;
+}
+.blue-tr:hover::before {
+  border: 0px;
+}
+
+/*fim segunda parte*/
+
+.abaixo {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin-left: 5rem;
+  margin-right: 5rem;
+  justify-content: center;
+}
+
+.abaixo1 {
+  background-color: #04b4ae;
+  padding: 2rem;
+}
+
+.abaixo2 {
+  background-color: #01a9db;
+  padding: 2rem;
+}
+
+.abaixo3 {
+  background-color: #0080ff;
+  padding: 2rem;
+}
